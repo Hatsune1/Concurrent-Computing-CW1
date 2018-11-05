@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <preCompilationAnalysis file="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_logging/src/debug_printf.c">
-=======
-<preCompilationAnalysis file="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_logging/src/debug_printf.c">
->>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <fCall global="true" name="debug_printf"/>
   <fCall global="true" name="debug_printf.nstackwords"/>
   <fCall global="true" name="strlen.nstackwords"/>
