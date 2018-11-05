@@ -1,5 +1,9 @@
 <preCompilationAnalysis>
+<<<<<<< HEAD
 <fInfo name="high_pulse" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="3">
+=======
+<fInfo name="high_pulse" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
@@ -16,7 +20,11 @@
     </values>
   </arg>
 </fInfo>
+<<<<<<< HEAD
 <fInfo name="high_pulse_sample" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="4">
+=======
+<fInfo name="high_pulse_sample" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="4">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
@@ -39,7 +47,11 @@
     </values>
   </arg>
 </fInfo>
+<<<<<<< HEAD
 <fInfo name="release_clock_and_wait" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="3">
+=======
+<fInfo name="release_clock_and_wait" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
@@ -56,7 +68,11 @@
     </values>
   </arg>
 </fInfo>
+<<<<<<< HEAD
 <fInfo name="start_bit" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="3">
+=======
+<fInfo name="start_bit" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
@@ -73,7 +89,11 @@
     </values>
   </arg>
 </fInfo>
+<<<<<<< HEAD
 <fInfo name="stop_bit" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="4">
+=======
+<fInfo name="stop_bit" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="4">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
@@ -95,7 +115,11 @@
     </values>
   </arg>
 </fInfo>
+<<<<<<< HEAD
 <fInfo name="tx8" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="5">
+=======
+<fInfo name="tx8" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="5">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
@@ -122,7 +146,11 @@
     </values>
   </arg>
 </fInfo>
+<<<<<<< HEAD
 <fInfo name="adjust_fall" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+=======
+<fInfo name="adjust_fall" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
@@ -139,7 +167,11 @@
     </values>
   </arg>
 </fInfo>
+<<<<<<< HEAD
 <fInfo name="adjust_for_slip" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+=======
+<fInfo name="adjust_for_slip" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
@@ -157,7 +189,11 @@
     </values>
   </arg>
 </fInfo>
+<<<<<<< HEAD
 <fInfo name="high_pulse_drive" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_single_port.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="7">
+=======
+<fInfo name="high_pulse_drive" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_single_port.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="7">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0" specialize="false">
     <values>
     </values>
@@ -192,7 +228,11 @@
     </values>
   </arg>
 </fInfo>
+<<<<<<< HEAD
 <fInfo name="high_pulse_sample" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_single_port.xc" specialize="true" noreturn="false" doNotSpecialize="false" numParams="7">
+=======
+<fInfo name="high_pulse_sample" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_single_port.xc" specialize="true" noreturn="false" doNotSpecialize="false" numParams="7">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0" specialize="false">
     <values>
     </values>
@@ -238,7 +278,11 @@
    </specialization>
  </specializations>
 </fInfo>
+<<<<<<< HEAD
 <fInfo name="start_bit" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_single_port.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="5">
+=======
+<fInfo name="start_bit" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_single_port.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="5">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0" specialize="false">
     <values>
     </values>
@@ -263,7 +307,11 @@
     </values>
   </arg>
 </fInfo>
+<<<<<<< HEAD
 <fInfo name="stop_bit" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_single_port.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="6">
+=======
+<fInfo name="stop_bit" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_single_port.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="6">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0" specialize="false">
     <values>
     </values>
@@ -293,7 +341,11 @@
     </values>
   </arg>
 </fInfo>
+<<<<<<< HEAD
 <fInfo name="tx8" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_single_port.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="7">
+=======
+<fInfo name="tx8" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_single_port.xc" specialize="false" noreturn="false" doNotSpecialize="false" numParams="7">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0" specialize="false">
     <values>
     </values>
@@ -328,13 +380,21 @@
     </values>
   </arg>
 </fInfo>
+<<<<<<< HEAD
 <fInfo name="wait_half" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_single_port.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="1">
+=======
+<fInfo name="wait_half" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_single_port.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="1">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0" specialize="false">
     <values>
     </values>
   </arg>
 </fInfo>
+<<<<<<< HEAD
 <fInfo name="wait_quarter" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_single_port.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="1">
+=======
+<fInfo name="wait_quarter" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_single_port.xc" specialize="false" noreturn="false" doNotSpecialize="true" numParams="1">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0" specialize="false">
     <values>
       <value type="unknown"/>
@@ -465,7 +525,11 @@
 <fInfo name="i2c_master" global="true" specialize="true" noreturn="false" doNotSpecialize="false" numParams="5">
   <arg num="0" specialize="false">
     <values>
+<<<<<<< HEAD
       <value type="interface"><interfaceInfo index="0" type="dist" func="i2c_master" global="true" impUnit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" impId="0" param="0"/></value>
+=======
+      <value type="interface"><interfaceInfo index="0" type="dist" func="i2c_master" global="true" impUnit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" impId="0" param="0"/></value>
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
       <value type="interface"><interfaceInfo index="0" type="dist" func="_Si2c_master_0" global="true" impUnit="../src/main.xc" impId="0" param="0"/></value>
     </values>
   </arg>
@@ -537,7 +601,11 @@
   </arg>
   <arg num="2" specialize="true">
     <values>
+<<<<<<< HEAD
       <value type="interface"><interfaceInfo index="0" type="dist" func="i2c_master" global="true" impUnit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" impId="0" param="0"/></value>
+=======
+      <value type="interface"><interfaceInfo index="0" type="dist" func="i2c_master" global="true" impUnit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" impId="0" param="0"/></value>
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
     </values>
   </arg>
   <arg num="3" specialize="false">
@@ -548,7 +616,11 @@
    <specialization id="0">
     <arg num="0"><values><value type="interface"/></values></arg>
     <arg num="1"><values><value type="unknown"/></values></arg>
+<<<<<<< HEAD
     <arg num="2"><values><value type="interface"><interfaceInfo index="0" type="dist" func="i2c_master" global="true" impUnit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" impId="0" param="0"/></value></values></arg>
+=======
+    <arg num="2"><values><value type="interface"><interfaceInfo index="0" type="dist" func="i2c_master" global="true" impUnit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" impId="0" param="0"/></value></values></arg>
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
     <arg num="3"><values><value type="unknown"/></values></arg>
    </specialization>
  </specializations>
@@ -936,9 +1008,15 @@
     </values>
   </arg>
 </fInfo>
+<<<<<<< HEAD
 <fCall name="i2c_master" global="true" callerUnit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="5" impId="0" specializationId="0">
 </fCall>
 <fCall name="i2c_master_async_aux" global="true" callerUnit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="4" impId="1" specializationId="0">
+=======
+<fCall name="i2c_master" global="true" callerUnit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="5" impId="0" specializationId="0">
+</fCall>
+<fCall name="i2c_master_async_aux" global="true" callerUnit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="4" impId="1" specializationId="0">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
 </fCall>
 <fCall name="i2c_master" global="true" callerUnit="../src/main.xc" numArgs="5" impId="0" specializationId="0">
 </fCall>

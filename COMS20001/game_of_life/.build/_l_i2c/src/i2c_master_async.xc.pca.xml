@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 <preCompilationAnalysis file="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc">
 <fDef name="adjust_fall" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" noreturn="false" doNotSpecialize="true" numParams="3"/>
 <fDef name="adjust_for_slip" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" noreturn="false" doNotSpecialize="true" numParams="3"/>
+=======
+<preCompilationAnalysis file="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc">
+<fDef name="adjust_fall" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" noreturn="false" doNotSpecialize="true" numParams="3"/>
+<fDef name="adjust_for_slip" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" noreturn="false" doNotSpecialize="true" numParams="3"/>
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
 <fDef name="_safe_memcmp" global="true" noreturn="false" doNotSpecialize="true" numParams="3"/>
 <fDef name="_safe_memmove" global="true" noreturn="false" doNotSpecialize="true" numParams="3"/>
 <fDef name="_safe_memset" global="true" noreturn="false" doNotSpecialize="true" numParams="3"/>
@@ -532,7 +538,11 @@
 <fCall name="i2c_master" global="true" numArgs="5" impId="0">
   <arg num="0">
     <values>
+<<<<<<< HEAD
       <value type="interface"><interfaceInfo index="0" type="dist" func="i2c_master" global="true" impUnit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" impId="0" param="0"/></value>
+=======
+      <value type="interface"><interfaceInfo index="0" type="dist" func="i2c_master" global="true" impUnit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" impId="0" param="0"/></value>
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
     </values>
   </arg>
   <arg num="1">
@@ -569,7 +579,11 @@
   </arg>
   <arg num="2">
     <values>
+<<<<<<< HEAD
       <value type="interface"><interfaceInfo index="0" type="dist" func="i2c_master" global="true" impUnit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" impId="0" param="0"/></value>
+=======
+      <value type="interface"><interfaceInfo index="0" type="dist" func="i2c_master" global="true" impUnit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" impId="0" param="0"/></value>
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
     </values>
   </arg>
   <arg num="3">
@@ -590,7 +604,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_for_slip" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_for_slip" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -607,7 +625,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_for_slip" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_for_slip" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -624,7 +646,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_for_slip" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_for_slip" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -641,7 +667,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_for_slip" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_for_slip" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -670,7 +700,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_fall" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_fall" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -687,7 +721,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_for_slip" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_for_slip" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -704,7 +742,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_fall" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_fall" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -721,7 +763,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_for_slip" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_for_slip" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -738,7 +784,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_for_slip" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_for_slip" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -755,7 +805,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_fall" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_fall" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -772,7 +826,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_for_slip" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_for_slip" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -789,7 +847,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_for_slip" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_for_slip" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -806,7 +868,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_fall" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_fall" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -823,7 +889,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_for_slip" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_for_slip" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -840,7 +910,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_fall" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_fall" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -857,7 +931,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_for_slip" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_for_slip" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
@@ -874,7 +952,11 @@
     </values>
   </arg>
 </fCall>
+<<<<<<< HEAD
 <fCall name="adjust_for_slip" global="false" unit="/Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+=======
+<fCall name="adjust_for_slip" global="false" unit="C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master_async.xc" numArgs="3">
+>>>>>>> 201cc967549ad2782e6bf6f058a33f217451af16
   <arg num="0">
     <values>
       <value type="unknown"/>
