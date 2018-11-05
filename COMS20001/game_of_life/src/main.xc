@@ -9,6 +9,8 @@
 
 #define  IMHT 16                  //image height
 #define  IMWD 16                  //image width
+#define  DEAD 0
+#define  ALIVE 255
 
 typedef unsigned char uchar;      //using uchar as shorthand
 
@@ -70,6 +72,7 @@ void DataInStream(char infname[], chanend c_out)
 void distributor(chanend c_in, chanend c_out, chanend fromAcc)
 {
   uchar val;
+  uchar image [IMHT] [IMWD];
 
   //Starting up and wait for tilting of the xCore-200 Explorer
   printf( "ProcessImage: Start, size = %dx%d\n", IMHT, IMWD );
@@ -83,7 +86,7 @@ void distributor(chanend c_in, chanend c_out, chanend fromAcc)
   for( int y = 0; y < IMHT; y++ ) {   //go through all lines
     for( int x = 0; x < IMWD; x++ ) { //go through each pixel per line
       c_in :> val;                    //read the pixel value
-      c_out <: (uchar)( val ^ 0xFF ); //send some modified pixel out
+      image[y][x] <: val;             //store the image in a temp 2D array
     }
   }
   printf( "\nOne processing round completed...\n" );
