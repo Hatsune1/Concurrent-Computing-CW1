@@ -1,0 +1,393 @@
+10:46:46 **** Build of configuration Default for project game_of_life ****
+xmake CONFIG=Default all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing i2c_master.xc
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:2:10: fatal error: 'i2c.h' file not found
+#include <i2c.h>
+         ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:24:30: error: interface declared inside parameter list
+int read_acceleration(client interface i2c_master_if i2c, int reg) {
+                             ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:24:23: error: parameter `i2c' has incomplete type
+int read_acceleration(client interface i2c_master_if i2c, int reg) {
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:25:5: error: use of undeclared identifer `i2c_regop_res_t'
+    i2c_regop_res_t result;
+    ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:25:21: error: parse error before "result"
+    i2c_regop_res_t result;
+                    ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:30:25: error: use of undeclared identifer `FXOS8700EQ_I2C_ADDR'
+    data = i2c.read_reg(FXOS8700EQ_I2C_ADDR, reg, result); 
+                        ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:30:51: error: use of undeclared identifer `result'
+    data = i2c.read_reg(FXOS8700EQ_I2C_ADDR, reg, result); 
+                                                  ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:30:5: warning: type defaults to `int' in declaration of `data' [-Wimplicit-int]
+    data = i2c.read_reg(FXOS8700EQ_I2C_ADDR, reg, result); 
+    ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:30:5: warning: data definition has no type or storage class [-Wunusual-code]
+    data = i2c.read_reg(FXOS8700EQ_I2C_ADDR, reg, result); 
+    ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:30:5: error: redefinition of 'data'
+    data = i2c.read_reg(FXOS8700EQ_I2C_ADDR, reg, result); 
+    ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:27:19: note: previous definition of 'data' was here
+    unsigned char data = 0;
+                  ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:30:16: error: trying to call interface function on incomplete interface type
+    data = i2c.read_reg(FXOS8700EQ_I2C_ADDR, reg, result); 
+           ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:31:5: error: parse error before "if"
+    if (result != I2C_REGOP_SUCCESS) {
+    ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:33:5: error: parse error before '}' token
+    }
+    ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:38:5: warning: type defaults to `int' in declaration of `data' [-Wimplicit-int]
+    data = i2c.read_reg(FXOS8700EQ_I2C_ADDR, reg+1, result);
+    ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:38:5: warning: data definition has no type or storage class [-Wunusual-code]
+    data = i2c.read_reg(FXOS8700EQ_I2C_ADDR, reg+1, result);
+    ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:38:5: error: redefinition of 'data'
+    data = i2c.read_reg(FXOS8700EQ_I2C_ADDR, reg+1, result);
+    ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:30:5: note: previous definition of 'data' was here
+    data = i2c.read_reg(FXOS8700EQ_I2C_ADDR, reg, result); 
+    ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:38:16: error: trying to call interface function on incomplete interface type
+    data = i2c.read_reg(FXOS8700EQ_I2C_ADDR, reg+1, result);
+           ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:39:5: error: parse error before "if"
+    if (result != I2C_REGOP_SUCCESS) {
+    ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:41:5: error: parse error before '}' token
+    }
+    ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:45:5: error: parse error before "if"
+    if (accel_val & 0x200) {
+    ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:47:5: error: parse error before '}' token
+    }
+    ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:50:1: error: parse error before '}' token
+}
+^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:61:3: error: parse error before "if"
+  if (!isnull(i2c_sda)) {
+  ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:63:3: error: parse error before '}' token
+  }
+  ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:65:26: error: parse error before "i2c_scl"
+  release_clock_and_wait(i2c_scl, fall_time, (bit_time * 3) / 4);
+                         ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:65:3: error: cannot declare a function in local scope.
+  release_clock_and_wait(i2c_scl, fall_time, (bit_time * 3) / 4);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:65:3: warning: return type defaults to `int' [-Wreturn-type]
+  release_clock_and_wait(i2c_scl, fall_time, (bit_time * 3) / 4);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:68:3: error: parse error before '}' token
+  }
+  ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:70:3: warning: type defaults to `int' in declaration of `tmr' [-Wimplicit-int]
+  tmr when timerafter(fall_time) :> void;
+  ^~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:70:3: warning: data definition has no type or storage class [-Wunusual-code]
+  tmr when timerafter(fall_time) :> void;
+  ^~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:70:3: error: redefinition of 'tmr'
+  tmr when timerafter(fall_time) :> void;
+  ^~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:60:9: note: previous definition of 'tmr' was here
+  timer tmr;
+        ^~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:70:7: error: parse error before "when"
+  tmr when timerafter(fall_time) :> void;
+      ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:70:12: error: cannot declare a function in local scope.
+  tmr when timerafter(fall_time) :> void;
+           ^~~~~~~~~~~~~~~~~~~~~
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.3.3\target/include\xs1.h:1710:47: note: expanded from macro 'timerafter'
+#define timerafter(val)                       __builtin_timer_after(val)
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:70:12: error: cannot redefine built in compiler function `__builtin_timer_after'
+  tmr when timerafter(fall_time) :> void;
+           ^~~~~~~~~~~~~~~~~~~~~
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.3.3\target/include\xs1.h:1710:47: note: expanded from macro 'timerafter'
+#define timerafter(val)                       __builtin_timer_after(val)
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:70:12: warning: return type defaults to `int' [-Wreturn-type]
+  tmr when timerafter(fall_time) :> void;
+           ^~~~~~~~~~~~~~~~~~~~~
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.3.3\target/include\xs1.h:1710:47: note: expanded from macro 'timerafter'
+#define timerafter(val)                       __builtin_timer_after(val)
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:70:37: warning: useless keyword in empty declaration [-Wunusual-code]
+  tmr when timerafter(fall_time) :> void;
+                                    ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:70:37: warning: empty declaration [-Wunusual-code]
+  tmr when timerafter(fall_time) :> void;
+                                    ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:71:3: warning: type defaults to `int' in declaration of `i2c_scl' [-Wimplicit-int]
+  i2c_scl <: 0;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:71:3: warning: data definition has no type or storage class [-Wunusual-code]
+  i2c_scl <: 0;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:71:12: error: parse error before '<:' token
+  i2c_scl <: 0;
+           ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:73:1: error: parse error before '}' token
+}
+^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:82:1: error: parse error before '}' token
+}
+^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:91:3: warning: type defaults to `int' in declaration of `i2c_scl' [-Wimplicit-int]
+  i2c_scl :> void;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:91:3: warning: data definition has no type or storage class [-Wunusual-code]
+  i2c_scl :> void;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:91:3: error: redefinition of 'i2c_scl'
+  i2c_scl :> void;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:71:3: note: previous definition of 'i2c_scl' was here
+  i2c_scl <: 0;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:91:12: error: parse error before ':>' token
+  i2c_scl :> void;
+           ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:91:14: warning: useless keyword in empty declaration [-Wunusual-code]
+  i2c_scl :> void;
+             ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:91:14: warning: empty declaration [-Wunusual-code]
+  i2c_scl :> void;
+             ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:92:15: error: parse error before "bit_time"
+  delay_ticks(bit_time / 4);
+              ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:92:3: error: cannot declare a function in local scope.
+  delay_ticks(bit_time / 4);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:92:3: warning: return type defaults to `int' [-Wreturn-type]
+  delay_ticks(bit_time / 4);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:93:3: warning: type defaults to `int' in declaration of `i2c_sda' [-Wimplicit-int]
+  i2c_sda  <: 0;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:93:3: warning: data definition has no type or storage class [-Wunusual-code]
+  i2c_sda  <: 0;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:93:13: error: parse error before '<:' token
+  i2c_sda  <: 0;
+            ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:94:15: error: parse error before "bit_time"
+  delay_ticks(bit_time / 2);
+              ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:94:3: error: cannot declare a function in local scope.
+  delay_ticks(bit_time / 2);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:94:3: warning: return type defaults to `int' [-Wreturn-type]
+  delay_ticks(bit_time / 2);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:95:3: warning: type defaults to `int' in declaration of `i2c_scl' [-Wimplicit-int]
+  i2c_scl  <: 0;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:95:3: warning: data definition has no type or storage class [-Wunusual-code]
+  i2c_scl  <: 0;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:95:3: error: redefinition of 'i2c_scl'
+  i2c_scl  <: 0;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:91:3: note: previous definition of 'i2c_scl' was here
+  i2c_scl :> void;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:95:13: error: parse error before '<:' token
+  i2c_scl  <: 0;
+            ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:96:3: warning: type defaults to `int' in declaration of `tmr' [-Wimplicit-int]
+  tmr :> fall_time;
+  ^~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:96:3: warning: data definition has no type or storage class [-Wunusual-code]
+  tmr :> fall_time;
+  ^~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:96:3: error: redefinition of 'tmr'
+  tmr :> fall_time;
+  ^~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:70:3: note: previous definition of 'tmr' was here
+  tmr when timerafter(fall_time) :> void;
+  ^~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:96:10: warning: type defaults to `int' in declaration of `fall_time' [-Wimplicit-int]
+  tmr :> fall_time;
+         ^~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:96:10: warning: data definition has no type or storage class [-Wunusual-code]
+  tmr :> fall_time;
+         ^~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:96:10: error: redefinition of 'fall_time'
+  tmr :> fall_time;
+         ^~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:90:12: note: previous definition of 'fall_time' was here
+  unsigned fall_time;
+           ^~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:98:1: error: parse error before '}' token
+}
+^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:105:3: warning: type defaults to `int' in declaration of `tmr' [-Wimplicit-int]
+  tmr when timerafter(fall_time + bit_time / 4) :> void;
+  ^~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:105:3: warning: data definition has no type or storage class [-Wunusual-code]
+  tmr when timerafter(fall_time + bit_time / 4) :> void;
+  ^~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:105:3: error: redefinition of 'tmr'
+  tmr when timerafter(fall_time + bit_time / 4) :> void;
+  ^~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:96:3: note: previous definition of 'tmr' was here
+  tmr :> fall_time;
+  ^~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:105:7: error: parse error before "when"
+  tmr when timerafter(fall_time + bit_time / 4) :> void;
+      ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:105:12: error: cannot declare a function in local scope.
+  tmr when timerafter(fall_time + bit_time / 4) :> void;
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.3.3\target/include\xs1.h:1710:47: note: expanded from macro 'timerafter'
+#define timerafter(val)                       __builtin_timer_after(val)
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:105:12: warning: return type defaults to `int' [-Wreturn-type]
+  tmr when timerafter(fall_time + bit_time / 4) :> void;
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.3.3\target/include\xs1.h:1710:47: note: expanded from macro 'timerafter'
+#define timerafter(val)                       __builtin_timer_after(val)
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:105:52: warning: useless keyword in empty declaration [-Wunusual-code]
+  tmr when timerafter(fall_time + bit_time / 4) :> void;
+                                                   ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:105:52: warning: empty declaration [-Wunusual-code]
+  tmr when timerafter(fall_time + bit_time / 4) :> void;
+                                                   ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:106:3: warning: type defaults to `int' in declaration of `i2c_sda' [-Wimplicit-int]
+  i2c_sda <: 0;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:106:3: warning: data definition has no type or storage class [-Wunusual-code]
+  i2c_sda <: 0;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:106:3: error: redefinition of 'i2c_sda'
+  i2c_sda <: 0;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:93:3: note: previous definition of 'i2c_sda' was here
+  i2c_sda  <: 0;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:106:12: error: parse error before '<:' token
+  i2c_sda <: 0;
+           ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:107:3: warning: type defaults to `int' in declaration of `tmr' [-Wimplicit-int]
+  tmr when timerafter(fall_time + bit_time / 2) :> void;
+  ^~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:107:3: warning: data definition has no type or storage class [-Wunusual-code]
+  tmr when timerafter(fall_time + bit_time / 2) :> void;
+  ^~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:107:3: error: redefinition of 'tmr'
+  tmr when timerafter(fall_time + bit_time / 2) :> void;
+  ^~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:105:3: note: previous definition of 'tmr' was here
+  tmr when timerafter(fall_time + bit_time / 4) :> void;
+  ^~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:107:12: error: cannot declare a function in local scope.
+  tmr when timerafter(fall_time + bit_time / 2) :> void;
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.3.3\target/include\xs1.h:1710:47: note: expanded from macro 'timerafter'
+#define timerafter(val)                       __builtin_timer_after(val)
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:107:12: warning: return type defaults to `int' [-Wreturn-type]
+  tmr when timerafter(fall_time + bit_time / 2) :> void;
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Program Files (x86)\XMOS\xTIMEcomposer\Community_14.3.3\target/include\xs1.h:1710:47: note: expanded from macro 'timerafter'
+#define timerafter(val)                       __builtin_timer_after(val)
+                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:107:52: warning: useless keyword in empty declaration [-Wunusual-code]
+  tmr when timerafter(fall_time + bit_time / 2) :> void;
+                                                   ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:107:52: warning: empty declaration [-Wunusual-code]
+  tmr when timerafter(fall_time + bit_time / 2) :> void;
+                                                   ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:108:26: error: parse error before "i2c_scl"
+  release_clock_and_wait(i2c_scl, fall_time, bit_time);
+                         ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:108:3: error: cannot declare a function in local scope.
+  release_clock_and_wait(i2c_scl, fall_time, bit_time);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:108:3: warning: return type defaults to `int' [-Wreturn-type]
+  release_clock_and_wait(i2c_scl, fall_time, bit_time);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:109:3: warning: type defaults to `int' in declaration of `i2c_sda' [-Wimplicit-int]
+  i2c_sda :> void;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:109:3: warning: data definition has no type or storage class [-Wunusual-code]
+  i2c_sda :> void;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:109:3: error: redefinition of 'i2c_sda'
+  i2c_sda :> void;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:106:3: note: previous definition of 'i2c_sda' was here
+  i2c_sda <: 0;
+  ^~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:109:12: error: parse error before ':>' token
+  i2c_sda :> void;
+           ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:109:14: warning: useless keyword in empty declaration [-Wunusual-code]
+  i2c_sda :> void;
+             ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:109:14: warning: empty declaration [-Wunusual-code]
+  i2c_sda :> void;
+             ^~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:110:15: error: parse error before "bit_time"
+  delay_ticks(bit_time/4);
+              ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:110:3: error: cannot declare a function in local scope.
+  delay_ticks(bit_time/4);
+  ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:110:3: warning: return type defaults to `int' [-Wreturn-type]
+  delay_ticks(bit_time/4);
+  ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:120:3: error: parse error before "for"
+  for (int i = 8; i != 0; i--) {
+  ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:120:19: warning: type defaults to `int' in declaration of `i' [-Wimplicit-int]
+  for (int i = 8; i != 0; i--) {
+                  ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:120:19: warning: data definition has no type or storage class [-Wunusual-code]
+  for (int i = 8; i != 0; i--) {
+                  ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:120:21: error: parse error before '!=' token
+  for (int i = 8; i != 0; i--) {
+                    ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:120:27: warning: type defaults to `int' in declaration of `i' [-Wimplicit-int]
+  for (int i = 8; i != 0; i--) {
+                          ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:120:27: warning: data definition has no type or storage class [-Wunusual-code]
+  for (int i = 8; i != 0; i--) {
+                          ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:120:27: error: redefinition of 'i'
+  for (int i = 8; i != 0; i--) {
+                          ^
+C:/Users/WHY/Documents/GitHub/Concurrent-Computing-CW1/COMS20001/lib_i2c/src/i2c_master.xc:120:19: note: previous definition of 'i' was here
+  for (int i = 8; i != 0; i--) {
+                  ^
+xmake[1]: *** [.build/_l_i2c/src/i2c_master.xc.pca.xml.decouple] Error 1
+xmake: *** [analyze] Error 2
+12:18:07 **** Build of configuration Default for project game_of_life ****
+xmake CONFIG=Default all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Command canceled
+12:18:13 **** Build of configuration Default for project game_of_life ****
+xmake CONFIG=Default all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Command canceled

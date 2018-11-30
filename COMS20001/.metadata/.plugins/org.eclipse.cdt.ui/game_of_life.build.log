@@ -1,0 +1,8 @@
+12:18:13 **** Build of configuration Default for project game_of_life ****
+xmake CONFIG=Default all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Command canceled
+
+12:18:15 Build Cancelled (took 2s.227ms)
+
