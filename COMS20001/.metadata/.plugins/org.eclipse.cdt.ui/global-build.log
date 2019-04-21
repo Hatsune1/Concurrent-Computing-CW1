@@ -1,0 +1,1603 @@
+19:01:14 **** Build of configuration Default for project game_of_life ****
+xmake CONFIG=Default all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Command canceled
+19:08:12 **** Build of configuration Default for project game_of_life ****
+xmake CONFIG=Default all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+WARNING: Include file /Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/game_of_life/src/pgmIO.h missing
+WARNING: Include file /Users/yangli/Desktop/Concurrent Programming/Concurrent-Computing-CW1/COMS20001/lib_i2c/api/i2c.h missing
+Creating dependencies for main.xc
+../src/main.xc:8: error: Can't open include file "i2c.h"
+    #include "i2c.h"
+1 error in preprocessor.
+xmake: *** [bin//game_of_life.xe] Error 2
+14:48:51 **** Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing pgmIO.c
+Analyzing debug_printf.c
+Analyzing main.xc
+../src/main.xc:370:5: error: called object is not a function
+    worker(worker[0]);
+    ^
+../src/main.xc:371:5: error: called object is not a function
+    worker(worker[1]);
+    ^
+../src/main.xc:372:5: error: called object is not a function
+    worker(worker[2]);
+    ^
+../src/main.xc:373:5: error: called object is not a function
+    worker(worker[3]);
+    ^
+xmake[1]: *** [.build/src/main.xc.pca.xml.decouple] Error 1
+xmake: *** [analyze] Error 2
+18:27:34 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Analyzing i2c_master.xc
+Analyzing i2c_master_async.xc
+C:/Users/WHY/Desktop/Todoku/Computer Scientist/Programming/XC/coms20001_l04/COMS20001/lib_i2c/src/i2c_master_async.xc:126:26: warning: argument 1 of `i2c_master_async_aux' slices interface preventing analysis of its parallel usage [-Wunusual-code]
+    i2c_master_async_aux(i, n, i2c_dist[0], max_transaction_size);
+                         ^
+Analyzing i2c_master_ext.xc
+Analyzing i2c_master_single_port.xc
+Analyzing i2c_slave.xc
+Analyzing xassert.xc
+Propagating analysis
+Creating dependencies for xassert.xc
+Creating dependencies for i2c_slave.xc
+Creating dependencies for i2c_master_single_port.xc
+Creating dependencies for i2c_master_ext.xc
+Creating dependencies for i2c_master_async.xc
+Creating dependencies for i2c_master.xc
+Creating dependencies for main.xc
+Creating dependencies for debug_printf.c
+Creating dependencies for pgmIO.c
+Compiling pgmIO.c
+Compiling debug_printf.c
+Compiling main.xc
+Compiling i2c_master.xc
+Compiling i2c_master_async.xc
+C:/Users/WHY/Desktop/Todoku/Computer Scientist/Programming/XC/coms20001_l04/COMS20001/lib_i2c/src/i2c_master_async.xc:126:26: warning: argument 1 of `i2c_master_async_aux' slices interface preventing analysis of its parallel usage [-Wunusual-code]
+    i2c_master_async_aux(i, n, i2c_dist[0], max_transaction_size);
+                         ^
+Compiling i2c_master_ext.xc
+Compiling i2c_master_single_port.xc
+Compiling i2c_slave.xc
+Compiling xassert.xc
+Creating game_of_life.xe
+Build Complete
+18:29:25 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+18:29:36 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+18:29:54 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+18:30:16 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+18:31:15 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+18:31:39 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+18:32:01 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+18:32:17 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+18:32:58 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+18:34:40 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+18:36:00 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+18:37:59 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+18:38:53 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+18:41:21 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+19:00:02 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:131:11: warning: unused variable `test' [-Wunused-variable]
+    uchar test;
+          ^~~~
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+../src/main.xc:131:11: warning: unused variable `test' [-Wunused-variable]
+    uchar test;
+          ^~~~
+Creating game_of_life.xe
+Build Complete
+19:00:37 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:131:11: warning: unused variable `test' [-Wunused-variable]
+    uchar test;
+          ^~~~
+Creating dependencies for main.xc
+Compiling main.xc
+../src/main.xc:131:11: warning: unused variable `test' [-Wunused-variable]
+    uchar test;
+          ^~~~
+Creating game_of_life.xe
+Build Complete
+19:02:06 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:167:47: error: use of undeclared identifer `liveNum'
+                if (bufPreResult[x] == ALIVE) liveNum++;
+                                              ^
+../src/main.xc:171:21: error: incompatible types in output
+        fromDist <: liveNum;
+                    ^~~~~~~
+xmake[1]: *** [.build/src/main.xc.pca.xml.decouple] Error 1
+xmake: *** [analyze] Error 2
+19:03:47 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+19:04:30 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+19:04:34 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+19:04:46 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+19:05:57 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+19:07:07 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+19:07:40 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+19:07:44 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+12:14:48 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:161:39: error: subscripted value is not an array or pointer
+                    printf("-%4.1d ", bufCurResult[y][x]);
+                                      ^~~~~~~~~~~~~~~
+xmake[1]: *** [.build/src/main.xc.pca.xml.decouple] Error 1
+xmake: *** [analyze] Error 2
+12:15:13 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+12:17:04 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+12:18:01 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+12:19:51 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+12:22:05 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+12:23:36 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+12:24:09 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+12:25:05 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+12:29:35 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+14:41:57 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+14:42:34 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+14:57:15 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:26:10 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:28:30 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:146:51: error: use of undeclared identifer `c'
+        val = image[IMAGE_HEIGHT_PER_WORKER-2][x];c
+                                                  ^
+../src/main.xc:147:9: error: parse error before "toNext"
+        toNext <: val;
+        ^
+xmake[1]: *** [.build/src/main.xc.pca.xml.decouple] Error 1
+xmake: *** [analyze] Error 2
+15:28:38 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:29:34 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:29:52 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:30:19 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+15:30:39 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:32:13 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:32:37 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+15:33:43 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:35:25 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:36:14 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+11:43:17 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+13:04:23 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+13:08:25 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+14:03:27 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+14:07:29 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+14:08:01 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+14:08:21 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+14:10:53 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+14:12:54 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+14:27:34 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+14:34:37 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+14:49:46 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+14:58:55 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:00:56 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:02:38 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:137:30: error: use of undeclared identifer `x'
+                if (image[y][x] != DEAD && image[y][x] != ALIVE)printf("GRAY ERROR INPUT in Round %d, image[%d][%d], %d\n", round, y, x, image[y][x]);
+                             ^
+xmake[1]: *** [.build/src/main.xc.pca.xml.decouple] Error 1
+xmake: *** [analyze] Error 2
+15:03:07 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:137:126: error: passing integer as unsafe pointer to argument 2 of `vprintf' outside of unsafe region
+                if (image[y][x] != DEAD && image[y][x] != ALIVE)vprintf("GRAY ERROR INPUT in Round %d, image[%d][%d], %d\n", round, y, x, image[y][x]);
+                                                                                                                             ^~~~~
+../src/main.xc:137:133: error: too many arguments to function `vprintf'
+                if (image[y][x] != DEAD && image[y][x] != ALIVE)vprintf("GRAY ERROR INPUT in Round %d, image[%d][%d], %d\n", round, y, x, image[y][x]);
+                                                                                                                                    ^
+xmake[1]: *** [.build/src/main.xc.pca.xml.decouple] Error 1
+xmake: *** [analyze] Error 2
+15:03:59 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:04:07 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+15:04:49 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:07:40 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:12:52 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:14:06 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:17:34 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:244:125: error: use of undeclared identifer `x'
+            if (val != DEAD && val != ALIVE)printf("GRAY ERROR BEFORE EXCHANGE in Round %d, image[%d][%d], %d\n", round, y, x, image[y][x]);
+                                                                                                                            ^
+../src/main.xc:244:128: error: use of undeclared identifer `image'
+            if (val != DEAD && val != ALIVE)printf("GRAY ERROR BEFORE EXCHANGE in Round %d, image[%d][%d], %d\n", round, y, x, image[y][x]);
+                                                                                                                               ^
+xmake[1]: *** [.build/src/main.xc.pca.xml.decouple] Error 1
+xmake: *** [analyze] Error 2
+15:18:08 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:244:98: error: use of undeclared identifer `x'
+            if (val != DEAD && val != ALIVE)printf("GRAY ERROR INITIAL  image[%d][%d], %d\n", y, x, image[y][x]);
+                                                                                                 ^
+../src/main.xc:244:101: error: use of undeclared identifer `image'
+            if (val != DEAD && val != ALIVE)printf("GRAY ERROR INITIAL  image[%d][%d], %d\n", y, x, image[y][x]);
+                                                                                                    ^
+xmake[1]: *** [.build/src/main.xc.pca.xml.decouple] Error 1
+xmake: *** [analyze] Error 2
+15:18:40 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:244:98: error: use of undeclared identifer `x'
+            if (val != DEAD && val != ALIVE)printf("GRAY ERROR INITIAL  image[%d][%d], %d\n", y, x, val);
+                                                                                                 ^
+xmake[1]: *** [.build/src/main.xc.pca.xml.decouple] Error 1
+xmake: *** [analyze] Error 2
+15:18:59 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:26:42 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:29:11 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:29:30 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+15:35:16 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+16:04:07 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+16:05:21 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+16:05:29 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+16:49:27 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+16:51:43 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+16:55:36 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+17:29:45 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+17:35:32 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+17:45:54 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:252:25: error: use of undeclared identifer `isPause'
+                    if (isPause){
+                        ^
+xmake[1]: *** [.build/src/main.xc.pca.xml.decouple] Error 1
+xmake: *** [analyze] Error 2
+17:46:13 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+17:47:09 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+17:47:47 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+17:48:06 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+17:49:34 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+10:32:09 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+10:32:30 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+10:32:37 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+10:32:44 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+10:32:50 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+10:46:29 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+10:55:10 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+10:56:54 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+11:36:05 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+11:36:11 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+11:36:47 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+11:46:32 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:438:45: error: index of array exceeds its upper bound
+    on tile[0]: workers(w3to4, w4to5, worker[4]);
+                                            ^~~
+../src/main.xc:439:45: error: index of array exceeds its upper bound
+    on tile[0]: workers(w4to5, w5to6, worker[5]);
+                                            ^~~
+../src/main.xc:440:45: error: index of array exceeds its upper bound
+    on tile[0]: workers(w5to6, w6to7, worker[6]);
+                                            ^~~
+../src/main.xc:441:45: error: index of array exceeds its upper bound
+    on tile[0]: workers(w6to7, w7to0, worker[7]);
+                                            ^~~
+xmake[1]: *** [.build/src/main.xc.pca.xml.decouple] Error 1
+xmake: *** [analyze] Error 2
+11:47:08 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+../src/main.xc: Error: Program on "tile[1]" contains a reference to resource "leds" not resident on that tile.
+../src/main.xc: Error: Program on "tile[1]" contains a reference to resource "buttons" not resident on that tile.
+xmake[1]: *** [bin//game_of_life.xe] Error 1
+xmake: *** [bin//game_of_life.xe] Error 2
+11:48:25 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+../src/main.xc: Error: Program on "tile[0]" contains a reference to resource "p_sda" not resident on that tile.
+../src/main.xc: Error: Program on "tile[0]" contains a reference to resource "p_scl" not resident on that tile.
+xmake[1]: *** [bin//game_of_life.xe] Error 1
+xmake: *** [bin//game_of_life.xe] Error 2
+11:49:28 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+11:49:59 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+11:51:31 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+11:52:46 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+11:53:19 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+11:53:25 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+11:57:29 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+../src/main.xc: Error: Program on "tile[0]" contains a reference to resource "leds" not resident on that tile.
+../src/main.xc: Error: Program on "tile[0]" contains a reference to resource "p_sda" not resident on that tile.
+../src/main.xc: Error: Program on "tile[0]" contains a reference to resource "p_scl" not resident on that tile.
+xmake[1]: *** [bin//game_of_life.xe] Error 1
+xmake: *** [bin//game_of_life.xe] Error 2
+11:57:58 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+11:58:52 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+11:59:59 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Constraint check for tile[1]:
+  Cores available:            8,   used:          8 .  OKAY
+  Timers available:          10,   used:          8 .  OKAY
+  Chanends available:        32,   used:         33 .  FAILED
+  Memory available:       262144,   used:      35488 .  OKAY
+    (Stack: 9292, Code: 24388, Data: 1808)
+Error: Constraints check FAILED for tile[1].
+xmake[1]: *** [bin//game_of_life.xe] Error 1
+xmake: *** [bin//game_of_life.xe] Error 2
+12:03:01 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+12:03:29 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+12:04:03 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+12:05:51 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+12:06:21 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+12:06:39 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+12:07:08 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+12:07:34 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+12:07:59 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+12:08:19 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+12:09:47 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:438:25: error: use of undeclared identifer `w3to0'
+    on tile[1]: workers(w3to0, w0to1, worker[0]);
+                        ^
+../src/main.xc:428:37: warning: unused variable `w3to4' [-Wunused-variable]
+streaming chan w0to1, w1to2, w2to3, w3to4, w4to5, w5to6, w6to7, w7to0;
+                                    ^~~~~
+../src/main.xc:428:44: warning: unused variable `w4to5' [-Wunused-variable]
+streaming chan w0to1, w1to2, w2to3, w3to4, w4to5, w5to6, w6to7, w7to0;
+                                           ^~~~~
+../src/main.xc:428:51: warning: unused variable `w5to6' [-Wunused-variable]
+streaming chan w0to1, w1to2, w2to3, w3to4, w4to5, w5to6, w6to7, w7to0;
+                                                  ^~~~~
+../src/main.xc:428:58: warning: unused variable `w6to7' [-Wunused-variable]
+streaming chan w0to1, w1to2, w2to3, w3to4, w4to5, w5to6, w6to7, w7to0;
+                                                         ^~~~~
+../src/main.xc:428:65: warning: unused variable `w7to0' [-Wunused-variable]
+streaming chan w0to1, w1to2, w2to3, w3to4, w4to5, w5to6, w6to7, w7to0;
+                                                                ^~~~~
+xmake[1]: *** [.build/src/main.xc.pca.xml.decouple] Error 1
+xmake: *** [analyze] Error 2
+12:10:10 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:441:32: warning: `w2to3' not used in two parallel statements [-Wunusual-code]
+    on tile[1]: workers(w1to2, w2to3, worker[2]);
+                               ^~~~~
+../src/main.xc:438:25: warning: `w3to0' not used in two parallel statements [-Wunusual-code]
+    on tile[1]: workers(w3to0, w0to1, worker[0]);
+                        ^~~~~
+../src/main.xc:435:135: warning: `worker' not used in two parallel statements (byte range 12..16) [-Wunusual-code]
+    on tile[0]: distributor(c_inIO, c_outIO, orientationToDistributor, button1ToDistributor, button2ToDistributor, distributorToLEDs, worker);
+                                                                                                                                      ^~~~~~
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+../src/main.xc:435:135: warning: `worker' not used in two parallel statements (byte range 12..16) [-Wunusual-code]
+    on tile[0]: distributor(c_inIO, c_outIO, orientationToDistributor, button1ToDistributor, button2ToDistributor, distributorToLEDs, worker);
+                                                                                                                                      ^~~~~~
+../src/main.xc:441:32: warning: `w2to3' not used in two parallel statements [-Wunusual-code]
+    on tile[1]: workers(w1to2, w2to3, worker[2]);
+                               ^~~~~
+../src/main.xc:438:25: warning: `w3to0' not used in two parallel statements [-Wunusual-code]
+    on tile[1]: workers(w3to0, w0to1, worker[0]);
+                        ^~~~~
+Creating game_of_life.xe
+Build Complete
+12:11:10 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+12:11:33 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+12:12:04 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+12:12:10 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+15:51:54 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:53:47 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+15:56:02 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+15:56:29 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+16:02:56 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+16:04:48 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+16:05:19 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+16:07:15 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+16:07:22 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+16:51:49 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Creating game_of_life.xe
+Build Complete
+16:53:16 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Creating game_of_life.xe
+Build Complete
+16:54:10 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:260:25: error: use of undeclared identifer `totalTime'
+                        totalTime = stopTime - startTime - pauseTime;
+                        ^
+xmake[1]: *** [.build/src/main.xc.pca.xml.decouple] Error 1
+xmake: *** [analyze] Error 2
+16:54:32 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+Creating dependencies for main.xc
+Compiling main.xc
+Creating game_of_life.xe
+Build Complete
+16:55:14 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+16:55:54 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete
+17:08:52 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Creating game_of_life.xe
+Build Complete
+17:09:30 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Creating game_of_life.xe
+Constraint check for tile[1]:
+  Cores available:            8,   used:          6 .  OKAY
+  Timers available:          10,   used:          6 .  OKAY
+  Chanends available:        32,   used:         29 .  OKAY
+  Memory available:       262144,   used:      302544 .  FAILED
+    (Stack: 276364, Code: 24400, Data: 1780)
+Error: Constraints check FAILED for tile[1].
+xmake[1]: *** [bin//game_of_life.xe] Error 1
+xmake: *** [bin//game_of_life.xe] Error 2
+17:10:27 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Creating game_of_life.xe
+Constraint check for tile[1]:
+  Cores available:            8,   used:          6 .  OKAY
+  Timers available:          10,   used:          6 .  OKAY
+  Chanends available:        32,   used:         29 .  OKAY
+  Memory available:       262144,   used:      290000 .  FAILED
+    (Stack: 263844, Code: 24372, Data: 1784)
+Error: Constraints check FAILED for tile[1].
+xmake[1]: *** [bin//game_of_life.xe] Error 1
+xmake: *** [bin//game_of_life.xe] Error 2
+17:12:39 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Creating game_of_life.xe
+Constraint check for tile[1]:
+  Cores available:            8,   used:          6 .  OKAY
+  Timers available:          10,   used:          6 .  OKAY
+  Chanends available:        32,   used:         29 .  OKAY
+  Memory available:       262144,   used:      270696 .  FAILED
+    (Stack: 244564, Code: 24348, Data: 1784)
+Error: Constraints check FAILED for tile[1].
+xmake[1]: *** [bin//game_of_life.xe] Error 1
+xmake: *** [bin//game_of_life.xe] Error 2
+17:14:20 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Creating game_of_life.xe
+Build Complete
+17:17:30 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Creating game_of_life.xe
+Constraint check for tile[1]:
+  Cores available:            8,   used:          6 .  OKAY
+  Timers available:          10,   used:          6 .  OKAY
+  Chanends available:        32,   used:         29 .  OKAY
+  Memory available:       262144,   used:      265800 .  FAILED
+    (Stack: 239644, Code: 24376, Data: 1780)
+Error: Constraints check FAILED for tile[1].
+xmake[1]: *** [bin//game_of_life.xe] Error 1
+xmake: *** [bin//game_of_life.xe] Error 2
+17:18:34 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Creating game_of_life.xe
+Constraint check for tile[1]:
+  Cores available:            8,   used:          6 .  OKAY
+  Timers available:          10,   used:          6 .  OKAY
+  Chanends available:        32,   used:         29 .  OKAY
+  Memory available:       262144,   used:      264592 .  FAILED
+    (Stack: 238444, Code: 24364, Data: 1784)
+Error: Constraints check FAILED for tile[1].
+xmake[1]: *** [bin//game_of_life.xe] Error 1
+xmake: *** [bin//game_of_life.xe] Error 2
+17:19:03 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Creating game_of_life.xe
+Constraint check for tile[1]:
+  Cores available:            8,   used:          6 .  OKAY
+  Timers available:          10,   used:          6 .  OKAY
+  Chanends available:        32,   used:         29 .  OKAY
+  Memory available:       262144,   used:      264592 .  FAILED
+    (Stack: 238444, Code: 24364, Data: 1784)
+Error: Constraints check FAILED for tile[1].
+xmake[1]: *** [bin//game_of_life.xe] Error 1
+xmake: *** [bin//game_of_life.xe] Error 2
+03:49:12 **** Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Creating game_of_life.xe
+Build Complete
+03:51:44 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Analyzing main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Propagating analysis
+Creating dependencies for main.xc
+Compiling main.xc
+../src/main.xc:199:9: warning: unused variable `outputStartTime' [-Wunused-variable]
+    int outputStartTime;
+        ^~~~~~~~~~~~~~~
+../src/main.xc:200:9: warning: unused variable `onputTime' [-Wunused-variable]
+    int onputTime = 0;
+        ^~~~~~~~~
+Creating game_of_life.xe
+Build Complete
+03:53:46 **** Incremental Build of configuration Default for project Game-of-Life ****
+xmake all 
+Checking build modules
+Using build modules: lib_i2c(3.0.0) lib_logging(2.0.0) lib_xassert(2.0.0)
+Build Complete

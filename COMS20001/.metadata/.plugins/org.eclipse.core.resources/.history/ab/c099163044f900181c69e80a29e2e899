@@ -1,0 +1,442 @@
+// COMS20001 - Cellular Automaton Farm - Initial Code Skeleton
+// (using the XMOS i2c accelerometer demo code)
+
+#include <platform.h>
+#include <xs1.h>
+#include <stdio.h>
+#include "pgmIO.h"
+#include "i2c.h"
+
+#define  IMHT 16                  //image height
+#define  IMWD 16                  //image width
+#define  DEAD 0
+#define  ALIVE 255
+#define  SEP_GREEN_LED 1
+#define  BLUE_LED 2
+#define  GREEN_LED 4
+#define  RED_LED 8
+
+#define  WORKER_AMOUNT 4
+#define  LINES_PER_WORKER IMHT/WORKER_AMOUNT
+#define  IMAGE_HEIGHT_PER_WORKER LINES_PER_WORKER+2
+#define  CONTINUE 1
+#define  OUTPUT 2
+#define  NOT_OUTPUT 0
+
+typedef unsigned char uchar;      //using uchar as shorthand
+
+on tile[0]: port p_scl = XS1_PORT_1E;         //interface ports to orientation
+on tile[0]: port p_sda = XS1_PORT_1F;
+
+#define FXOS8700EQ_I2C_ADDR 0x1E  //register addresses for orientation
+#define FXOS8700EQ_XYZ_DATA_CFG_REG 0x0E
+#define FXOS8700EQ_CTRL_REG_1 0x2A
+#define FXOS8700EQ_DR_STATUS 0x0
+#define FXOS8700EQ_OUT_X_MSB 0x1
+#define FXOS8700EQ_OUT_X_LSB 0x2
+#define FXOS8700EQ_OUT_Y_MSB 0x3
+#define FXOS8700EQ_OUT_Y_LSB 0x4
+#define FXOS8700EQ_OUT_Z_MSB 0x5
+#define FXOS8700EQ_OUT_Z_LSB 0x6
+
+on tile[0] : in port buttons = XS1_PORT_4E; //port to access xCore-200 buttons
+on tile[0] : out port leds = XS1_PORT_4F;   //port to access xCore-200 LEDs
+
+int showLEDs(out port p, chanend fromDist) {
+  int pattern;
+  while (1) {
+    fromDist :> pattern;   //receive new pattern from visualiser
+    if (pattern == -1) {
+        p <: 0;
+        break;
+    }
+    else p <: pattern;                //send pattern to LED port
+  }
+  return 0;
+}
+
+//READ BUTTONS and send button pattern to userAnt
+void buttonListener(in port b, chanend inToDist, chanend outToDist) {
+  int r;
+  while (1) {
+    b when pinseq(15)  :> r;                 // check that no button is pressed
+    b when pinsneq(15) :> r;                 // check if some buttons are pressed
+    if (r==13) inToDist <: r;           // send button pattern to userAnt
+    if (r==14) outToDist <: r;
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// Read Image from PGM file from path infname[] to channel c_out
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+void DataInStream(char infname[], chanend c_out)
+{
+  int res;
+  uchar line[ IMWD ];
+
+  printf( "DataInStream: Start...\n" );
+
+  //Open PGM file
+  res = _openinpgm( infname, IMWD, IMHT );
+  if( res ) {
+    printf( "DataInStream: Error openening %s\n.", infname );
+    return;
+  }
+
+  //Read image line-by-line and send byte by byte to channel c_out
+  for( int y = 0; y < IMHT; y++ ) {
+    _readinline( line, IMWD );
+    for( int x = 0; x < IMWD; x++ ) {
+      c_out <: line[ x ];
+    }
+  }
+
+  //Close PGM image file
+  _closeinpgm();
+  printf( "DataInStream: Done...\n" );
+  return;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+// Worker function receive initial image from distributor, exchange both front and end
+// edge with previous and next worker and process image.
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+void workers (streaming chanend preToSelf, streaming chanend selfToNext, chanend fromDist) {
+    uchar image [IMAGE_HEIGHT_PER_WORKER][IMWD];
+    uchar bufPreResult [IMWD];
+    uchar bufCurResult [IMWD];
+    int value;
+    int round = 1;
+
+    //Get the part of image to be processed by this worker
+    for (int y = 1; y < IMAGE_HEIGHT_PER_WORKER-1; y++) {
+      for (int x = 0; x < IMWD; x++) {
+        fromDist :> image[y][x];
+      }
+    }
+
+    while(1) {
+        int liveNum = 0;
+
+        //Send and get extra lines from other workers
+        for (int x = 0; x < IMWD; x++) {
+            selfToNext <: image[IMAGE_HEIGHT_PER_WORKER-2][x];
+            preToSelf :> image[0][x];
+            preToSelf <: image[1][x];
+            selfToNext :> image[IMAGE_HEIGHT_PER_WORKER-1][x];
+        }
+        // Processing for loop.
+        for( int y = 1; y < IMAGE_HEIGHT_PER_WORKER; y++ ) {
+            // In each line, put result into bufCurResult.
+            if (y < IMAGE_HEIGHT_PER_WORKER-1){
+                for( int x = 0; x < IMWD; x++ ) {
+                    int aliveCounter = 0;
+                    for (int i = y-1; i <= y+1; i++){
+                        if (image[i][(x-1+IMWD)%IMWD] == ALIVE) aliveCounter++;
+                        if (i != y && image[i][x] == ALIVE) aliveCounter++;
+                        if (image[i][(x+1)%IMWD] == ALIVE) aliveCounter++;
+                    }
+                    //if (aliveCounter != 0) printf("alive = %d\n", aliveCounter);
+                    if (image[y][x] == ALIVE){
+                        if (aliveCounter < 2 || aliveCounter > 3) bufCurResult[x] = DEAD;
+                        else bufCurResult[x] = ALIVE;
+                    }
+                    else if (image[y][x] == DEAD) {
+                        if (aliveCounter == 3) bufCurResult[x] = ALIVE;
+                        else bufCurResult[x] = DEAD;
+                    }
+                    else if(image[y][x] != DEAD && image[y][x] != ALIVE){
+                        printf("ERROR in Round %d, image[%d][%d], value = %d\n", round, y, x, image[y][x]);
+                    }
+                }
+            }
+            // Rewrite last line by bufPreResult.
+            if (y > 1){
+                for( int x = 0; x < IMWD; x++ ) image[y-1][x] = bufPreResult[x];
+            }
+            // Pass data from buf
+            if (y < IMAGE_HEIGHT_PER_WORKER-1){
+                for(int x = 0; x < IMWD; x++) bufPreResult[x] = bufCurResult[x];
+            }
+        }
+
+        //Check if needs output
+        fromDist :> value;
+        if (value) {
+            for (int y = 1; y < IMAGE_HEIGHT_PER_WORKER-1; y++) {
+                for (int x = 0; x < IMWD; x++) {
+                    fromDist <: image[y][x];
+                }
+            }
+        }
+
+        for (int y = 1; y < IMAGE_HEIGHT_PER_WORKER-1; y++) {
+            for (int x = 0; x < IMWD; x++){
+                if (image[y][x] == ALIVE) liveNum++;
+            }
+        }
+        fromDist <: liveNum;
+        //Receive signal for next round
+        fromDist :> value;
+        round++;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+//
+// Receive initial image and hand out to workers.
+// Receive Orientation and Output signal and send LED signals.
+// Record time and calculate total time without pause time.
+//
+//////////////////////////////////////////////////////////////////////////////////////
+void distributor (chanend fromIN, chanend toOUT, chanend fromORI,
+        chanend fromButtonIN, chanend fromButtonOUT, chanend toLED,
+        chanend worker[WORKER_AMOUNT]){
+    int value;
+    int round = 0;
+    int liveNum = 0;
+
+    timer tmr;
+    int startTime;
+    int stopTime;
+    int totalTime;
+    int pauseTime = 0;
+
+    // Record pause status during a pause and output status during a single round.
+    int isPaused = 0;
+    int isOutput = 0;
+
+    uchar val;
+
+    printf( "ProcessImage: Start, size = %dx%d\n", IMHT, IMWD );
+    printf( "Waiting for Button Press...\n" );
+    fromButtonIN :> value;
+    printf( "Processing...\n" );
+
+    // Show green LED
+    toLED <: GREEN_LED;
+    // When the Read button was pressed,
+    // read from file and hand out to workers.
+    for (int i = 0; i < WORKER_AMOUNT; i++){
+        for (int y = 0; y < IMWD * LINES_PER_WORKER; y++){
+            fromIN :> val;
+            worker[i] <: val;
+        }
+    }
+    // Record start time.
+    tmr :> startTime;
+
+    // Execute the main loop.
+    //while(round < 100){
+    while(1){
+        select {
+            // When the output button was pressed, export data and show blue LED
+            case fromButtonOUT :> value:{
+                if (!isOutput) {
+                    if (isPaused){
+                        toLED <: BLUE_LED + RED_LED;
+                    }
+                    else toLED <: BLUE_LED;
+                    isOutput = 1;
+                    toOUT <: 1;
+                    for (int i = 0; i < WORKER_AMOUNT; i++){
+                        worker[i] <: 1;
+                        for (int y = LINES_PER_WORKER * i; y < (i+1) * LINES_PER_WORKER; y++){
+                            for (int x = 0; x < IMWD; x++){
+                                worker[i] :> val;
+                                toOUT <: val;
+                                printf(" %4.1d", val);
+                            }
+                            printf("\n");
+                        }
+                    }
+                    break;
+                }
+                if (isOutput) break;
+                break;
+            }
+            // When tilted, report the number of rounds and live cells,
+            // time passed after read file, and show red LED.
+            case fromORI :> value:{
+                // Record stop time and report only when tilt begin.
+                if(!isPaused){
+                    if (value) {
+                        tmr :> stopTime;
+                        totalTime = stopTime - startTime - pauseTime;
+                        printf("Round: %d\n", round);
+                        printf("Live number is %d\n", liveNum);
+                        int printTimeSec = totalTime / 100000000;
+                        int printTimeMiliSec = (totalTime - printTimeSec * 100000000) / 100000;
+                        printf("Time passed: %d.%ds\n", printTimeSec, printTimeMiliSec);
+                        isPaused = 1;
+                        toLED <: RED_LED;
+                    }
+                    if (!value) break;
+                }
+                // If tilt is finished record the pause time and add it to total pause time.
+                if (isPaused) {
+                    if (value) break;
+                    if (!value) {
+                        tmr :> value;
+                        pauseTime += value - stopTime;
+                        isPaused = 0;
+                    }
+                }
+                break;
+            }
+            // When not tilted and not output, collect liveNum from workers and send signal to workers.
+            default:{
+                if (isPaused == 0) {
+                    liveNum = 0;
+                    //printf( "\nOne processing round completed...\n" );
+                    for (int i = 0; i < WORKER_AMOUNT; i++) {
+                        if (!isOutput) worker[i] <: 0;
+                        worker[i] :> value;
+                        liveNum += value;
+                        worker[i] <: CONTINUE;
+                    }
+                    // Add 1 to round and show separate green LED.
+                    //printf("livenum = %d\n", liveNum);
+                    round ++;
+                    isOutput = 0;
+                    if (round%2==1) toLED <: SEP_GREEN_LED;
+                    else toLED <: 0;
+                }
+                break;
+            }
+        }
+    }
+    tmr :> stopTime;
+    totalTime = stopTime - startTime - pauseTime;
+    printf("FINISHED\n");
+    printf("Round: %d\n", round);
+    printf("Live number is %d\n", liveNum);
+    int printTimeSec = totalTime / 100000000;
+    int printTimeMiliSec = (totalTime - printTimeSec * 100000000) / 100000;
+    printf("Time passed: %d.%ds\n", printTimeSec, printTimeMiliSec);
+    int timePerRound = totalTime / (100000000 * round);
+    int timePerRoundMiliSec = (totalTime / round - timePerRound * 100000000) / 100000;
+    printf("Round average time: %d.%ds\n", timePerRound, timePerRoundMiliSec);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// Write pixel stream from channel c_in to PGM image file
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+void DataOutStream(char outfname[], chanend c_in)
+{
+  int res;
+  uchar line[ IMWD ];
+
+  while(1) {
+      c_in :> int value;
+      //Open PGM file
+      printf( "DataOutStream: Start...\n" );
+      res = _openoutpgm( outfname, IMWD, IMHT );
+      if( res ) {
+          printf( "DataOutStream: Error opening %s\n.", outfname );
+      }
+
+      //Compile each line of the image and write the image line-by-line
+      for( int y = 0; y < IMHT; y++ ) {
+          for( int x = 0; x < IMWD; x++ ) {
+              c_in :> line[ x ];
+          }
+          _writeoutline( line, IMWD );
+          printf( "DataOutStream: Line written...\n" );
+      }
+
+      //Close the PGM image
+      _closeoutpgm();
+      printf( "DataOutStream: Done...\n" );
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// Initialise and  read orientation, send first tilt event to channel
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+void orientation( client interface i2c_master_if i2c, chanend toDist) {
+  i2c_regop_res_t result;
+  char status_data = 0;
+  int isPaused = 0;
+
+  // Configure FXOS8700EQ
+  result = i2c.write_reg(FXOS8700EQ_I2C_ADDR, FXOS8700EQ_XYZ_DATA_CFG_REG, 0x01);
+  if (result != I2C_REGOP_SUCCESS) {
+    printf("I2C write reg failed\n");
+  }
+  
+  // Enable FXOS8700EQ
+  result = i2c.write_reg(FXOS8700EQ_I2C_ADDR, FXOS8700EQ_CTRL_REG_1, 0x01);
+  if (result != I2C_REGOP_SUCCESS) {
+    printf("I2C write reg failed\n");
+  }
+
+  //Probe the orientation x-axis forever
+  while (1) {
+
+    //check until new orientation data is available
+    do {
+      status_data = i2c.read_reg(FXOS8700EQ_I2C_ADDR, FXOS8700EQ_DR_STATUS, result);
+    } while (!status_data & 0x08);
+
+    //get new x-axis tilt value
+    int x = read_acceleration(i2c, FXOS8700EQ_OUT_X_MSB);
+
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // We changed part of code in orientation from keep sending tilt(or not) data to
+    // only send data when from untilt to tilt or from tilt to untilt.
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+    if (x>35 && isPaused == 0) {
+        toDist <: 1;
+        isPaused = 1;
+    }
+    if (x<25 && isPaused == 1) {
+        toDist <: 0;
+        isPaused = 0;
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+// Orchestrate concurrent system and start up all threads
+//
+/////////////////////////////////////////////////////////////////////////////////////////
+int main(void) {
+
+i2c_master_if i2c[1];                                 //interface to orientation
+
+//char infname[] = "test.pgm";                          //put your input image path here
+//char outfname[] = "testout.pgm";                      //put your output image path here
+chan c_inIO, c_outIO,
+     orientationToDistributor,
+     button1ToDistributor, button2ToDistributor,
+     distributorToLEDs,
+     worker[WORKER_AMOUNT];
+streaming chan w0to1, w1to2, w2to3, w3to0;
+
+par {
+    on tile[0]: i2c_master(i2c, 1, p_scl, p_sda, 10);             //server thread providing orientation data
+    on tile[0]: orientation(i2c[0],orientationToDistributor);     //client thread reading orientation data
+    on tile[0]: DataInStream("test.pgm", c_inIO);                    //thread to read in a PGM image
+    on tile[0]: DataOutStream("testout.pgm", c_outIO);                 //thread to write out a PGM image
+    on tile[0]: distributor(c_inIO, c_outIO, orientationToDistributor, button1ToDistributor, button2ToDistributor, distributorToLEDs, worker);
+    on tile[0]: buttonListener(buttons, button1ToDistributor, button2ToDistributor);
+    on tile[0]: showLEDs(leds,distributorToLEDs);
+    on tile[1]: workers(w3to0, w0to1, worker[0]);
+    on tile[1]: workers(w0to1, w1to2, worker[1]);
+    on tile[1]: workers(w1to2, w2to3, worker[2]);
+    on tile[1]: workers(w2to3, w3to0, worker[3]);
+  }
+  return 0;
+}
