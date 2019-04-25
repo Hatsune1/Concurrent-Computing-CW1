@@ -13,6 +13,7 @@ import argparse
 import numpy as np
 import matplotlib.pyplot as plt
 from utilities import load_data, print_features, print_predictions
+from scipy import stats
 
 # you may use these colours to produce the scatter plots
 CLASS_1_C = r'#3366ff'
@@ -118,8 +119,29 @@ def alternative_classifier(train_set, train_labels, test_set, **kwargs):
     test_set_2d = test_set[:, features]
 
     predictions = np.zeros(test_set.shape[0], dtype=int)
+
+    indices_of_label1 = np.argwhere(train_labels == 1).flatten('F')
+    indices_of_label2 = np.argwhere(train_labels == 2).flatten('F')
+    indices_of_label3 = np.argwhere(train_labels == 3).flatten('F')
+
+    train_set_2d_label1 = train_set_2d[indices_of_label1, :]
+    train_set_2d_label2 = train_set_2d[indices_of_label2, :]
+    train_set_2d_label3 = train_set_2d[indices_of_label3, :]
     
-    return []
+    cm1 = np.cov(train_set_2d_label1.T)
+    mu1 = np.mean(train_set_2d_label1, axis = 0)
+    cm2 = np.cov(train_set_2d_label2.T)
+    mu2 = np.mean(train_set_2d_label2, axis = 0)
+    cm3 = np.cov(train_set_2d_label3.T)
+    mu3 = np.mean(train_set_2d_label3, axis = 0)
+    
+    for i in range(test_set.shape[0]):
+        p1 = stats.multivariate_normal.pdf(test_set_2d[i,:], mean = mu1, cov = cm1)
+        p2 = stats.multivariate_normal.pdf(test_set_2d[i,:], mean = mu2, cov = cm2)
+        p3 = stats.multivariate_normal.pdf(test_set_2d[i,:], mean = mu3, cov = cm3)
+        predictions[i] = np.argmax([p1, p2, p3])+1
+
+    return predictions
 
 
 def knn_three_features(train_set, train_labels, test_set, k, features = [0, 6, 12],**kwargs):
