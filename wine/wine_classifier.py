@@ -20,96 +20,104 @@ CLASS_1_C = r'#3366ff'
 CLASS_2_C = r'#cc3300'
 CLASS_3_C = r'#ffc34d'
 
-MODES = ['feature_sel', 'knn', 'alt', 'knn_3d', 'knn_pca']    
+MODES = ['feature_sel', 'knn', 'alt', 'knn_3d', 'knn_pca'] 
+# My code
+# Blue, Red, Yellow
+class_colours = np.array([CLASS_1_C, CLASS_2_C, CLASS_3_C])
+train_set, train_labels, test_set, test_labels = load_data()   
 
+def myFunction_graph_combinations(train_set, train_labels):
+    n_features = train_set.shape[1]
+    fig, ax = plt.subplots(n_features, n_features)
+    plt.subplots_adjust(left=0.01, right=5.99, top=5.99, bottom=0.01, wspace=0.2, hspace=0.4)
+    for i in range(n_features):
+        for j in range(n_features):
+            ax[i][j].scatter(train_set[:, i], train_set[:, j], c=class_colours[train_labels[:]-1])
+            ax[i][j].set_title('Features {} vs {}'.format(i+1, j+1))
+
+# 1-B 2-R 3-Y
 def overlapping_numbers(feature, labels):
-    olp_ns = np.zeros(3, dtype=int)
+    olp_ns = np.zeros(6, dtype=int)
     for i in range(3):
         index = np.concatenate(np.argwhere(labels == i+1), axis=0)
         group_max = max(np.take(feature, index))
         group_min = min(np.take(feature, index))
         for j in range(feature.shape[0]):
-            if feature[j] > group_min and feature[j] < group_max and labels[j] != i+1:
-                olp_ns[i] += 1
+            if feature[j] > group_min and feature[j] < group_max and labels[j] == (i+1)%3+1:
+                olp_ns[2*i] += 1
+            if feature[j] > group_min and feature[j] < group_max and labels[j] == (i+2)%3+1:
+                olp_ns[2*i+1] += 1
     return olp_ns
 
-def feature_selection(train_set, train_labels, n = 2, **kwargs):
+def combinations(index, d, list_f):
+    global temp_comb
+    global min_comb
+    global min_dotp
+    if d == 1:
+        for i in range(index, len(list_f)):
+            temp_comb.append(i)
+            dotp = 0
+            for j in range(list_f[0].shape[0]):
+                product = 1
+                for k in temp_comb:
+                    product *= list_f[k][j]
+                dotp += product
+            if dotp < min_dotp:
+                min_dotp = dotp
+                for m in range(len(temp_comb)):
+                    min_comb[m] = temp_comb[m]
+            del temp_comb[-1]
+    else: 
+        if d > 1:
+            for i in range(index, len(list_f)-d+1):
+                temp_comb.append(i)
+                combinations(i+1, d-1, list_f)
+                del temp_comb[-1]
+
+def feature_selection(train_set, train_labels, f=2, **kwargs):
     # write your code here and make sure you return the features at the end of 
     # the function
-    features = []
     measurements = []
     for i in range(train_set.shape[1]):
         olp = overlapping_numbers(train_set[:,i], train_labels)
-        measurements.append(sum(olp))
-    for i in range(n):
-        #argmin only takes the first of min
-        features.append(np.argmin(measurements))
-        measurements[np.argmin(measurements)] = float('inf')
-    return features    
+        measurements.append(olp)
+    global min_dotp 
+    min_dotp = float('inf')
+    global min_comb
+    min_comb = []
+    for i in range(f):
+        min_comb.append(i)
+    global temp_comb
+    temp_comb = []
+    combinations(0, f, measurements)
+    result = []
+    for i in range(len(min_comb)):
+        result.append(min_comb[i])
+    del min_comb[-f:]
+    return result
 
+def knn_core(train_set_f, train_labels, test_set_f, k):
+    predict_labels = np.zeros(test_set_f.shape[0], dtype='int')
+    
+    for t in range(test_set_f.shape[0]):
+        distances = np.zeros(train_set_f.shape[0])
+        for i in range(train_set_f.shape[0]):
+            for j in range(train_set_f.shape[1]):
+                distances[i] += (test_set_f[t][j] - train_set_f[i][j]) ** 2
+            distances[i] = distances[i] ** 0.5
+        class_counter = np.zeros(3)
+        for i in range(k):
+            class_counter[train_labels[np.argmin(distances)] - 1] += 1
+            distances[np.argmin(distances)] = float('inf')
+        predict_labels[t] = np.argmax(class_counter) + 1
+    return predict_labels
 
-def knn(train_set, train_labels, test_set, k, features = [6,9], **kwargs):
+def knn(train_set, train_labels, test_set, k, **kwargs):
     # write your code here and make sure you return the predictions at the end of 
     # the function
-
-    # features = feature_selection(train_set, train_labels)
-    train_set_2d = train_set[:, features]
-    test_set_2d = test_set[:, features]
-
-    predictions = np.zeros(test_set.shape[0], dtype=int)
-
-    for test_index in range(test_set.shape[0]): 
-        test_feature1 = test_set_2d[test_index, 0]
-        test_feature2 = test_set_2d[test_index, 1]
-        distance = np.zeros(train_set.shape[0])
-
-        for train_index in range (train_labels.shape[0]):
-            train_feature1 = train_set_2d[train_index, 0]
-            train_feature2 = train_set_2d[train_index, 1]
-            distance[train_index] = ((test_feature1 - train_feature1)**2 + (test_feature2 - train_feature2)**2)**0.5
-
-        label_counter = np.zeros(3)
-        for i in range(k): 
-            label = train_labels[np.argmin(distance)]
-            label_counter[label-1] += 1
-            distance[np.argmin(distance)] = float('inf')
-        
-        predictions[test_index] = np.argmax(label_counter) + 1
-
-    return predictions
-
-
-# def knn(train_set, train_labels, test_set, k, n = 2, **kwargs):
-#     # write your code here and make sure you return the predictions at the end of 
-#     # the function
-#     features = feature_selection(train_set, train_labels)
-#     train_set_nd = train_set[:, features]
-#     test_set_nd = test_set[:, features]
-
-#     predictions = np.zeros(test_set.shape[0], dtype=int)
-    
-#     for test_index in range(test_set.shape[0]): 
-#         for i in range(n): 
-#             test_feature = np.zeros(n)
-#             test_feature[i] = test_set_nd[test_index, i]
-
-#         distance = np.zeros(train_set.shape[0])
-#         for train_index in range (train_labels.shape[0]):
-#             for i in range(n): 
-#                 train_feature = np.zeros(n)
-#                 train_feature[i] = train_set_nd[train_index, i]
-
-#             distance[train_index] = np.sum(np.square(test_feature - train_feature)) ** 0.5
-
-#         label_counter = np.zeros(3)
-#         for i in range(k): 
-#             label = train_labels[np.argmin(distance)]
-#             label_counter[label-1] += 1
-#             distance[np.argmin(distance)] = float('inf')
-
-#         predictions[test_index] = np.argmax(label_counter) + 1
-
-#     return predictions
+    train_set_f = train_set[:, feature_selection(train_set, train_labels)]
+    test_set_f = test_set[:, feature_selection(train_set, train_labels)]
+    return knn_core(train_set_f, train_labels, test_set_f, k)
 
 def alternative_classifier(train_set, train_labels, test_set, **kwargs):
     # write your code here and make sure you return the predictions at the end of 
@@ -143,45 +151,39 @@ def alternative_classifier(train_set, train_labels, test_set, **kwargs):
 
     return predictions
 
-
-def knn_three_features(train_set, train_labels, test_set, k, features = [0, 6, 12],**kwargs):
+def knn_three_features(train_set, train_labels, test_set, k, **kwargs):
     # write your code here and make sure you return the predictions at the end of 
     # the function
-    train_set_3d = train_set[:, features]
-    test_set_3d = test_set[:, features]
+    train_set_f = train_set[:, feature_selection(train_set, train_labels, 3)]
+    test_set_f = test_set[:, feature_selection(train_set, train_labels, 3)]
+    return knn_core(train_set_f, train_labels, test_set_f, k)
 
-    predictions = np.zeros(test_set.shape[0], dtype=int)
-
-    for test_index in range(test_set.shape[0]): 
-        test_feature1 = test_set_3d[test_index, 0]
-        test_feature2 = test_set_3d[test_index, 1]
-        test_feature3 = test_set_3d[test_index, 2]
-        distance = np.zeros(train_set.shape[0])
-
-        for train_index in range (train_labels.shape[0]):
-            train_feature1 = train_set_3d[train_index, 0]
-            train_feature2 = train_set_3d[train_index, 1]
-            train_feature3 = train_set_3d[train_index, 2]
-            distance[train_index] = ((test_feature1 - train_feature1)**2 + 
-                                        (test_feature2 - train_feature2)**2 +
-                                        (test_feature3 - train_feature3)**2) ** 0.5
-
-        label_counter = np.zeros(3)
-        for i in range(k): 
-            label = train_labels[np.argmin(distance)]
-            label_counter[label-1] += 1
-            distance[np.argmin(distance)] = float('inf')
-        
-        predictions[test_index] = np.argmax(label_counter) + 1
-
-    return predictions
-
+def pca_core(data_set, n_components):
+    norm_data_set = data_set - np.mean(data_set, axis = 0)
+    cov_matrix = np.cov(norm_data_set, rowvar = False)
+    eigenvalues, eigenvectors = np.linalg.eig(cov_matrix)
+    order = np.flip(np.argsort(eigenvalues), axis = 0)[0:n_components]
+    W = eigenvectors[:,order]
+    myPCA = np.dot(norm_data_set, W)
+    return myPCA
 
 def knn_pca(train_set, train_labels, test_set, k, n_components=2, **kwargs):
     # write your code here and make sure you return the predictions at the end of 
     # the function
-    return []
+    pca_train_set = pca_core(train_set, n_components)
+    pca_test_set = pca_core(test_set, n_components)
+    pred_pca = knn_core(pca_train_set, train_labels, pca_test_set, k)
+    pca_plot = plt.subplot()
+    pca_plot.scatter(pca_train_set[:, 0], pca_train_set[:, 1], c=class_colours[train_labels[:]-1])
+    pca_plot.set_title('PCA plot')
+    return pred_pca
 
+def accuracy(pred, label):
+    counter = 0
+    for i in range(pred.shape[0]):
+        if pred[i] == label[i]:
+            counter += 1
+    return counter/len(pred)
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -261,15 +263,13 @@ if __name__ == '__main__':
     elif mode == 'knn_3d':
         # predictions = knn_three_features(train_set, train_labels, test_set, args.k)
         # print_predictions(predictions)
-        for j in [0,1,2,3,4,5,7,8,10,11,12]:
-            features = [j, 6, 9]
-            predictions = knn_three_features(train_set, train_labels, test_set, args.k, features)
-            print_predictions(predictions)
-            correct_count = float(0)
-            for i in range(test_labels.shape[0]):
-                if predictions[i] == test_labels[i]:
-                    correct_count +=1
-            print(correct_count/test_labels.shape[0])
+        predictions = knn_three_features(train_set, train_labels, test_set, args.k)
+        print_predictions(predictions)
+        correct_count = float(0)
+        for i in range(test_labels.shape[0]):
+            if predictions[i] == test_labels[i]:
+                correct_count +=1
+        print(correct_count/test_labels.shape[0])
     elif mode == 'knn_pca':
         prediction = knn_pca(train_set, train_labels, test_set, args.k)
         print_predictions(prediction)
